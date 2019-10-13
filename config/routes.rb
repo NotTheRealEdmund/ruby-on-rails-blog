@@ -5,4 +5,7 @@ root 'posts#index'
 
 #a regular route, e.g. localhost:3000/about
 get 'about' => 'pages#about'
+
+#resource route
+resources :posts
 end
