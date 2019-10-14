@@ -1,3 +1,19 @@
 To run website, go to C drive > Users > edmun > simpleblog, right click and click "Git Bash Here".
 Then in the bash, type in: "rails server".
 Then in your web browser, type in: "localhost:3000" or "localhost:3000/about" or "localhost:3000/posts/new"
+****************************************************************************************************************************************
+To add a static html page to ruby on rails.
+Go to app > views > pages, open notepad, create your .html and save it as a .html.erb file.
+e.g. anime.html.erb
+<h1><%= @title %></h1>
+<p><%= @content %></p>
+
+Go to app > controllers > pages_controller.rb, add in the function that the controller will call with the parameters.
+e.g. 
+def anime
+	@title = "Anime time";
+	@content = "Time for some anime";
+end
+
+Go to config > routes.rb, add in the route to run the function. e.g. get 'anime' => 'pages#anime'
+****************************************************************************************************************************************
